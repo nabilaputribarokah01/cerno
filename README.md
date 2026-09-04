@@ -4,7 +4,7 @@ Aplikasi web berbasis AI yang membantu pengguna menilai risiko pesan, tautan, da
 
 ## Lab 1.2: PERUMUSAN PERMASALAHAN
  
-**Ketua Kelompok:** 
+**Ketua Kelompok: Nabila Putri Barokah - 24/541890/TK/60132** 
  
 **Anggota 1:** 
  
