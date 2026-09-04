@@ -8,4 +8,4 @@ Aplikasi web berbasis AI yang membantu pengguna menilai risiko pesan, tautan, da
  
 **Anggota 1:** Galang Swastika Ramadhan - 24/538251/TK/59692
  
-**Anggota 2:** 
+**Anggota 2:** Farand Hafiz - 24/540618/TK/60027
