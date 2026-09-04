@@ -6,6 +6,6 @@ Aplikasi web berbasis AI yang membantu pengguna menilai risiko pesan, tautan, da
  
 **Ketua Kelompok: Nabila Putri Barokah - 24/541890/TK/60132** 
  
-**Anggota 1:** 
+**Anggota 1:** Galang Swastika Ramadhan - 24/538251/TK/59692
  
 **Anggota 2:** 
