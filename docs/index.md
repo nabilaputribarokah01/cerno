@@ -12,4 +12,4 @@
 
 Departemen Teknologi Elektro dan Teknologi Informasi, Fakultas Teknik, Universitas Gadjah Mada
 
-[📄 Modul 1_26.pdf](./Modul%201_26.pdf)
+[Modul 1_26.pdf](./Modul%201_26.pdf)
