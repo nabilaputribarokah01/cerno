@@ -13,6 +13,9 @@
 Departemen Teknik Elektro dan Teknologi Informasi, Fakultas Teknik, Universitas Gadjah Mada
 
 [Modul 1_26.pdf](./Modul%201_26.pdf)
+[Modul 2_26.pdf](./Modul%202_26.pdf)
+
+# MODUL 2
 
 ### Metodologi SDLC
 
