@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+:root {
+  --canvas: oklch(0.975 0.004 245);
+  --surface: oklch(0.995 0.003 245);
+  --subtle: oklch(0.945 0.006 245);
+  --border: oklch(0.36 0.012 245);
+  --ink: oklch(0.24 0.012 245);
+  --muted: oklch(0.5 0.01 245);
+  --primary: oklch(0.29 0.018 245);
+}
+
+* { box-sizing: border-box; }
+html { background: var(--canvas); }
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+button, input, textarea, select { font: inherit; }
+button, a, input, textarea, select {
+  outline-color: var(--primary);
+  outline-offset: 3px;
+}
+::selection { background: var(--ink); color: var(--surface); }
+.wf-grid {
+  background-image:
+    linear-gradient(to right, oklch(0.82 0.006 245 / 0.22) 1px, transparent 1px),
+    linear-gradient(to bottom, oklch(0.82 0.006 245 / 0.22) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  a, button, input, textarea, select {
+    transition: background-color 180ms ease-out, color 180ms ease-out, border-color 180ms ease-out;
+  }
+}

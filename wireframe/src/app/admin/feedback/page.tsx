@@ -1,0 +1,11 @@
+import { AppShell, PageHeader, Status, WirePanel, buttonSecondary, fieldClass } from "@/components/wireframe";
+
+const feedback = [
+  ["FB-092", "ANA-0221", "Kurang berisiko", "Tidak", "High → review", "Model menilai rendah padahal URL meminta login."],
+  ["FB-091", "ANA-0218", "Benar", "Ya", "Selesai", "Penjelasan domain membantu."],
+  ["FB-087", "ANA-0213", "Terlalu berisiko", "Tidak yakin", "Review", "Pesan resmi tetapi memakai kata OTP."],
+];
+
+export default function FeedbackPage() {
+  return <AppShell admin><PageHeader eyebrow="admin · evaluasi" title="Feedback pengguna" description="Gunakan feedback untuk menemukan false positive, false negative, dan penjelasan yang tidak membantu. Feedback bukan label training otomatis." /><div className="mx-auto max-w-[1180px] px-5 py-8 sm:px-8"><WirePanel label="filter feedback" className="p-4"><div className="grid gap-3 md:grid-cols-[1fr_200px_200px_auto]"><input className={fieldClass} aria-label="Cari feedback" placeholder="Cari ID analisis atau komentar..." /><select className={fieldClass} aria-label="Filter verdict"><option>Semua verdict</option><option>Benar</option><option>Terlalu berisiko</option><option>Kurang berisiko</option></select><select className={fieldClass} aria-label="Filter status"><option>Perlu ditinjau</option><option>Selesai</option></select><button type="button" className={buttonSecondary}>Terapkan</button></div></WirePanel><WirePanel label="feedback terbaru" className="mt-5"><div className="divide-y divide-[var(--border)]">{feedback.map(([id,analysis,verdict,helpful,state,comment])=><article key={id} className="grid gap-4 p-5 lg:grid-cols-[90px_110px_150px_120px_1fr_auto] lg:items-center"><span className="font-mono text-xs font-bold">{id}</span><span className="font-mono text-xs">{analysis}</span><strong className="text-sm">{verdict}</strong><span className="text-sm">Membantu: {helpful}</span><p className="text-sm leading-6 text-[var(--muted)]">{comment}</p><Status label={state} tone={state.includes("review")||state==="Review"?"hatched":"neutral"} /></article>)}</div></WirePanel><div className="mt-6 border border-[var(--border)] bg-[var(--subtle)] p-5 text-sm leading-6"><strong>Alur evaluasi:</strong> pilih sampel → tinjau evidence dan data teredaksi → lakukan adjudikasi → catat keputusan → evaluasi threshold pada dataset terpisah.</div></div></AppShell>;
+}

@@ -1,0 +1,7 @@
+import Link from "next/link";
+import type { ReactNode } from "react";
+import { Logo } from "@/components/wireframe";
+
+export function AuthFrame({ eyebrow, title, description, children, footer }: { eyebrow: string; title: string; description: string; children: ReactNode; footer: ReactNode }) {
+  return <main className="grid min-h-screen bg-[var(--canvas)] lg:grid-cols-[.8fr_1.2fr]"><section className="flex flex-col justify-between border-b border-[var(--border)] bg-[var(--ink)] p-6 text-[var(--surface)] lg:border-r lg:border-b-0 lg:p-12"><Logo /><div className="py-16"><p className="font-mono text-xs uppercase tracking-wider opacity-70">akses riwayat pribadi</p><h1 className="mt-5 max-w-lg text-4xl font-black leading-tight sm:text-5xl">SIMPAN HASIL, BUKAN PESAN MENTAHNYA.</h1><p className="mt-5 max-w-lg leading-7 opacity-75">Akun membantu Anda melihat kembali keputusan dan tindakan yang pernah disarankan CERNO.</p></div><Link href="/" className="text-sm underline underline-offset-4">← Kembali ke beranda</Link></section><section className="grid place-items-center p-5 sm:p-10"><div className="w-full max-w-md"><p className="font-mono text-xs font-bold uppercase tracking-wider text-[var(--muted)]">{eyebrow}</p><h2 className="mt-3 text-3xl font-black">{title}</h2><p className="mt-3 leading-7 text-[var(--muted)]">{description}</p><div className="mt-8">{children}</div><div className="mt-7 border-t border-[var(--border)] pt-5 text-sm">{footer}</div></div></section></main>;
+}
